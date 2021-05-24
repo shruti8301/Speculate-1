@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Speculate</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/favicons/apple-touch-icon.png">
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/img/favicons/favicon-32x32.png"
+        >
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/img/favicons/favicon-16x16.png"
+        >
+        <link rel="shortcut icon" type="image/x-icon" href="./assets/img/favicons/favicon.ico">
+        <link rel="manifest" href="./assets/img/favicons/manifest.json">
+        <meta name="msapplication-TileImage" content="./assets/img/favicons/mstile-150x150.png">
+        <meta name="theme-color" content="#ffffff">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600,700%7cPoppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="./assets/lib/owl-carousel/owl.carousel.min.css" rel="stylesheet">
+        <link href="./assets/lib/plyr/plyr.css" rel="stylesheet">
+        <link href="./assets/lib/slick-carousel/slick.css" rel="stylesheet">
+        <link href="./assets/lib/slick-carousel/slick-theme.css" rel="stylesheet">
+        <link href="./assets/css/theme.css" rel="stylesheet">
+    </head>
+    <body>
+        <main class="main" id="top">
+            <nav class="navbar bg-dark navbar-dark sticky-kit navbar-expand-lg py-3 sticky-kit">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img
+                            src="./assets/img/favicons/favicon-32x32.png"
+                            alt="logo"
+                            width="50"
+                            height="50"
+                        >
+                    </a>
+                    <button
+                        class="navbar-toggler collapsed"
+                        type="button"
+                        data-toggle="collapse"
+                        data-target="#navbarStandard"
+                        aria-controls="navbarStandard"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation"
+                    >
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    
+                    <div class="ml-auto mt-3 mt-lg-0">
+                        <a
+                            class="btn btn-sm btn-secondary mr-xl-3 mr-lg-2 mr-3"
+                            href="#!"
+                            data-toggle="modal"
+                            data-target="#myModal"
+                            onclick="dictitems()"
+                        >View dictionary</a>
+                        
+                    </div>
+                    <div class=" mt-3 mt-lg-0">
+                      <a
+                          class="btn btn-sm btn-secondary mr-xl-3 mr-lg-2 mr-3"
+                          href="#!"
+                          id="addbtn"
+                          onclick="addtodict()"
+                      >Add to dictionary</a>
+                      
+                  </div>
+              
+                </div>
+            </nav>
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Dictionary</h4>
+                        </div>
+                        <div class="modal-body" id="dictitems">
+                            <p>Items</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="bg-dark py-xxl-11 py-xl-8 py-lg-6 py-0">
+                <div class="bg-holder" style="background-image:url(./assets/img/bg-img/home-header.png);"></div>
+                <!--/.bg-holder-->
+                <div class="bg-holder" style="background-image:url(./assets/img/bg-img/appland_bg_companies.svg);background-position:bottom;background-size:100%;z-index:1;"></div>
+                <!--/.bg-holder-->
+                <div class="container">
+                    <div class="row" data-zanim-timeline="{&quot;delay&quot;:0.5}" data-zanim-trigger="scroll">
+                        <div class="col">
+                            <div class="position-relative text-center z-index-1 mb-4" data-zanim-xs='{"delay":0.2,"duration":1.5}'>
+                                <h1 class="display-2 text-white font-weight-medium fs-xl-7 fs-md-6 fs-3 mt-4 mt-md-0">
+                                    <span class="d-inline-block position-relative">
+                                        Speculate
+                                        <span class="heading-shapes heading-shapes-right d-none d-md-block" style="background-image: url(./assets/img/illustrations/shapes-13.png); height: 80px; width: 90px"></span>
+                                    </span>
+                                    <br>
+                                </h1>
+                                <p class="fs-md-2 fs-0 text-capitalize mt-4 mx-auto" data-zanim-xs='{"delay":0.3,"duration":1.5}'>The fastest way to predict words</p>
+                                <form class="mb-6 mailbluster-subscribe" data-zanim-xs='{"delay":0.4,"duration":1.5}'>
+                                    <div class="form-row justify-content-center">
+                                        <div class="col-lg-4 col-md-6 col-sm-9">
+                                            <div class="mailbluster-feedback"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form-row justify-content-center align-items-center">
+                                        <div class="col-auto mr-md-2">
+                                            <input
+                                                class="form-control bg-secondary border border-secondary text-white mt-3"
+                                                type="text"
+                                                name="email"
+                                                placeholder="Word"
+                                                id="word"
+                                            >
+                                        </div>
+                                        <div class="col-auto mt-md-0">
+                                            <button class="btn btn-primary mt-3" onclick="heard()" id="predict">Predict</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <p
+                                    class="fs-md-2 fs-0 text-capitalize mt-4 mx-auto"
+                                    data-zanim-xs='{"delay":0.3,"duration":1.5}'
+                                    id="answer"
+                                    style="display: none;"
+                                >Prediction</p>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8 col-md-8 col-10">
+                                    <img
+                                        class="position-absolute d-none d-md-block"
+                                        src="./assets/img/illustrations/home/appland_shapes2.png"
+                                        alt=""
+                                        style="width: 13%; top: 7%; left: -9%;"
+                                    >
+                                    <img
+                                        class="position-absolute d-none d-md-block"
+                                        src="./assets/img/illustrations/home/appland_shapes4.png"
+                                        alt=""
+                                        style="width: 15%; top: 13%; right: -7%;"
+                                    >
+                                    <img
+                                        class="position-absolute d-none d-md-block"
+                                        src="./assets/img/illustrations/home/appland_shapes3.png"
+                                        alt=""
+                                        style="width: 13%; top: 60%; left: -9%;"
+                                    >
+                                    <img
+                                        class="img-fluid position-relative"
+                                        src="./assets/img/gallery/iPad-Pro-Mockup.png"
+                                        alt=""
+                                        data-zanim-xs='{"delay":0.5,"duration":1.5}'
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+            <div class="col-xxl-10 col-xl-9 col-lg-8 col-10 mb-md-4 mb-lg-0 text-center"> 
+                    <h6 class="mb-xxl-6 mb-xl-5 mb-lg-4 mb-md-4 text-800 font-weight-bold fs-md-0 fs--1 position-relative z-index-1">Made with ❤ <br> Bhavya - 19BCE2016 <br> Eshika - 19BCE0271 <br> Shruti - 19BCE2061</h6>
+          </div> 
+        </main>
+        <script type="text/javascript" src="data.json"></script>
+        <script src="./app.js"></script>
+        <script src="./assets/js/jquery.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.js"></script>
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/lib/is/is.min.js"></script>
+        <script src="./assets/lib/stickyfilljs/stickyfill.min.js"></script>
+        <script src="./assets/lib/sticky-kit/sticky-kit.min.js"></script>
+        <!-- Global site tag (gtag.js) - Google Analytics-->
+        <script src="./assets/lib/owl-carousel/owl.carousel.min.js"></script>
+        <script src="./assets/lib/plyr/plyr.min.js"></script>
+        <script src="./assets/lib/slick-carousel/slick.min.js"></script>
+        <script src="./assets/js/theme.js"></script>
+        <script>
+        $(".predict").click(function(event){
+          event.preventDefault();
+        });
+        </script>
+    </body>
+</html>
